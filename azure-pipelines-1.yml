@@ -8,11 +8,11 @@ steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.8'
-- script: pip install -r sdk/dev-requirements.txt
+- script: pip install -r sdk/python/dev-requirements.txt
   displayName: 'pip install notebook reqs'
 - task: Bash@3
   inputs:
-    filePath: 'sdk/setup.sh'
+    filePath: 'sdk/python/setup.sh'
   displayName: 'set up sdk'
 
 - task: Bash@3
